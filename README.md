@@ -23,7 +23,7 @@ YubiHSM2 will be connected.
         wget https://developers.yubico.com/YubiHSM2/Releases/yubihsm2-sdk-2024-09-ubuntu2204-amd64.tar.gz
         ```
 
-2. [Check][signed] that the package is signed by an official developer. If we run `gpg --verify`
+2. [Check][devkey] that the package is signed by an official developer. If we run `gpg --verify`
    we will see the ID of the key that was used to sign the package. Download that key using `gpg
     --recv-keys`, then re-run the verify step to get the fingerprint of the key. Confirm that it
    is in the list of [developer keys][devkey].
