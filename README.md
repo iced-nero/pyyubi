@@ -59,6 +59,9 @@ YubiHSM2 will be connected.
    of the shell prompt and doesn't need to be typed in. If no URL is specified, the system will
    try to reach `http://localhost:12345` by default, the locally-connected HSM2 module.
 
+   The `-l http://IP:port` option can be used to specify a port for the shell to connect to, if
+   you wish to run the shell with another HSM2 accessible over the network.
+
    The `open` line will only work if the HSM2 was reset to factory mode, since it creates a new
    session using the default password `password`. If this works, congratulations! We've reached
    the HSM2 module that is plugged into the PC.
@@ -83,7 +86,11 @@ YubiHSM2 will be connected.
         pip install yubihsm[http,usb]	# remove http or usb if it is not needed
         ```
 
-8. Run `basic_test.py` to do some simple tests on the device.
+9. Run `basic/basic_test.py` to generate a new key and sign some data with it.
+
+10. Run `basic/factory_key.py` to show some info about the default auth key.
+
+11. Run `basic/produce_pubkey.py` to generate a new key and save its public key in the PEM format.
 
 ## Troubleshooting
 
