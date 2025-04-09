@@ -41,7 +41,7 @@ YubiHSM2 will be connected.
 
         ```bash
         tar xf yubihsm2-sdk-2024-09-ubuntu2204-amd64.tar.gz
-        cd yubihsm2
+        cd yubihsm2-sdk
 	sudo dpkg-divert --package libyubihsm-dev --divert /usr/include/ykhsmauth.h1 --rename /usr/include/ykhsmauth.h
         sudo dpkg -i *.deb
         ```
